@@ -12,8 +12,8 @@
             padding: 0;
             margin: auto;
             display: block;
-            width: 500px;
-            height: 500px;
+            width: 500;
+            height: 500;
             position: absolute;
             top: 0;
             bottom: 0;
@@ -26,7 +26,15 @@
 
 <body>
     <canvas id="relogio"></canvas>
+    <script>
+        var elemento = document.getElementById("relogio");
+        var contexto = elemento.getContext("2d");
+        var circulo = elemento.height / 2;
+        contexto.translate(circulo, circulo);
+        circulo = circulo * 0.95
 
+        acionarRelogio();
+    </script>
 </body>
 
 </html>
